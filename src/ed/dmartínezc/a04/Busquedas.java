@@ -91,6 +91,6 @@ public abstract class Busquedas {
      * @param array, el vector.
      * @param x, el numero buscado.
      */
-    public void buscar(int array[], int x) {
-    }
+    public abstract void buscar(int array[], int x);
+    
 }
