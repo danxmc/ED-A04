@@ -11,10 +11,18 @@ package ed.dmartínezc.a04;
  */
 public class Secuencial extends Busquedas {
 
+    //Constructor
     public Secuencial(int x) {
         super(x);
     }
 
+    /**
+     * Hace la funcion de buscar secuencialmente el dato, hace uso del method
+     * showResultado para mostrar el numero de ciclos, y la posicion en que se
+     * encontro.
+     * @param array, el vector.
+     * @param x, el numero a buscar.
+     */
     @Override
     public void buscar(int array[], int x) {
         boolean flag = false;

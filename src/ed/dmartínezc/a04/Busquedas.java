@@ -28,7 +28,7 @@ public abstract class Busquedas {
 
     //Methods
     /**
-     *
+     * Sobreescribe lo que hay en los espacios del vector
      */
     public void setVector() {
         Scanner scan = new Scanner(System.in);
@@ -48,8 +48,9 @@ public abstract class Busquedas {
     }
 
     /**
-     *
-     * @return
+     * Method, pregunta el numero a buscar en el vector y lo envia al method
+     * buscar.
+     * 
      */
     public void queBusco() {
         Scanner scan = new Scanner(System.in);
@@ -57,6 +58,10 @@ public abstract class Busquedas {
         buscar(vector, scan.nextInt());
     }
 
+    /**
+     * Imprime el contenido de los espacios del vector, haciendo uso del
+     * method getVector.
+     */
     public void showVector() {
         getVector();
         for (int i = 0; i < vector.length; i++) {
@@ -65,6 +70,13 @@ public abstract class Busquedas {
         System.out.println("");
     }
 
+    /**
+     * Imprime la posicion y los ciclos que se tomaron para encontrar el valor
+     * en el vector.
+     * 
+     * @param pos, la posicion en el vector del dato buscado.
+     * @param ciclos, el numero de ciclos tomados para encontrarlo.
+     */
     public void showResultado(Integer pos, Integer ciclos) {
         System.out.println("Dato encontrado en la posición: " + pos);
         System.out.println("Repeticion de ciclos: " + ciclos + "\n");
@@ -74,6 +86,11 @@ public abstract class Busquedas {
         System.out.println("");
     }
 
+    /**
+     * Overriden method in subclasses.
+     * @param array, el vector.
+     * @param x, el numero buscado.
+     */
     public void buscar(int array[], int x) {
     }
 }
